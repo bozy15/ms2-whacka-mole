@@ -1,6 +1,7 @@
 ## Table of Contents
 1. [**UX**](#ux)
     - [**Project Goals**](#project-goals)
+<<<<<<< HEAD
     - [**Player Goals**](#player-goals)
     - [**Developers goals**](#developer-goals)
     - [**User Stories**](#user-stories)
@@ -46,3 +47,8 @@ The players goals:
 ## Testing 
 
 All testing of this project can be found here on [testing.md](testing.md) on a separate file.
+=======
+## UX 
+
+### Project Goals
+>>>>>>> 4ac5aa02ba5e5c73fce1bc06d8d5332dfa8cbc94
