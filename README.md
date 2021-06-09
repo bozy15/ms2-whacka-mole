@@ -23,8 +23,6 @@
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
 
-
-
 ## UX 
 
 #### Project Goals
@@ -69,18 +67,39 @@ As the user of this application I want:
 
 **Sprites**
 
-- I used two mole Sprites. The first sprite is an innocent looking mole that appears from within the hole and the second sprite is used for when the user hits the mole to the give effect the mole has be bonked.
+- The game uses two mole Sprites. The first sprite is an innocent looking mole that appears from within the hole and the second sprite is used for when the user hits the mole to the give effect the mole has be bonked.
 
 **Audio files**
 
-- I wanted to add some audio in the background as the user plays as I found without the audio the game feels very one dimensional, I find the audio adds some sub-conscious entertainment and keeps the player more immersed.
+- Audio plays in the background as the user starts the game as without the audio the game feels very one dimensional, the audio adds some sub-conscious entertainment and keeps the player more immersed.
 
-- I added a snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
+- A snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
 
 
 ## Testing 
 
 All testing of this project can be found here on [testing.md](testing.md) on a separate file.
+
+## Deployment
+
+## Credits
+
+### Media
+
+#### Images
+
+#### Audio
+
+### Code
+
+#### Educational Credit
+
+- [Code Institute](https://www.codeinstitute.net/) Where 99% of this developers knowledge of JavaScript comes from.
+
+- [DailyJS](**https://medium.com/dailyjs/how-to-build-a-simple-sprite-animation-in-javascript-b764644244aa**) For helping with this developer to understand how to animate a sprite sheet and why its more efficient.  
+
+### Content
+
 
 
   
