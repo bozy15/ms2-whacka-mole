@@ -89,6 +89,8 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 #### Images
 
+- Mole sprite sheet is open source content retrieved from [lepunk](https://github.com/lepunk/sprite-sheet-generator/blob/master/input.png) and is free to use.
+
 #### Audio
 
 ### Code
