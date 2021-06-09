@@ -27,7 +27,7 @@
 
 ## UX 
 
-### Project Goals
+#### Project Goals
 
 The main goal of Whacka-mole is to give the user a fun, intuitive and addictive game with a growing level of difficulty as the game progresses.
 
@@ -55,7 +55,28 @@ As the user of this application I want:
 5. A visually appealing game.
 6. The ability to play this game on multiple devices.
 
-## Design choices
+### Design choices
+
+**Colors**
+
+- The theme of this game revolves heavily around moles and my aim was to achieve an earthy look and feel with the color scheme.
+
+**Styling**
+
+**Background**
+
+- The background image/colors used were to help make the game feel like it is played on the ground with the moles digging underneath the soil and popping up before being bonked on the head.
+
+**Sprites**
+
+- I used two mole Sprites. The first sprite is an innocent looking mole that appears from within the hole and the second sprite is used for when the user hits the mole to the give effect the mole has be bonked.
+
+**Audio files**
+
+- I wanted to add some audio in the background as the user plays as I found without the audio the game feels very one dimensional, I find the audio adds some sub-conscious entertainment and keeps the player more immersed.
+
+- I added a snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
+
 
 ## Testing 
 
