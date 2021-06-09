@@ -1,8 +1,7 @@
 ## Table of Contents
 1. [**UX**](#ux)
     - [**Project Goals**](#project-goals)
-<<<<<<< HEAD
-    - [**Player Goals**](#player-goals)
+    - [**User Goals**](#user-goals)
     - [**Developers goals**](#developer-goals)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
@@ -32,7 +31,7 @@
 
 The main goal of Whacka-mole is to give the user a fun, intuitive and addictive game with a growing level of difficulty as the game progresses.
 
-#### Player Goals
+#### User Goals
 
 The players goals:
 - An entertaining game that can help pass time.
@@ -42,13 +41,25 @@ The players goals:
 
 #### Developer Goals
 
+- Build a small game that I would enjoy playing to past the time and also challenge myself.
+- Write clean code using JavaScript and jQuery to allow the game to function without issues and also allow others to see how the code works with inline comments on block of code.
+- Create a new project to add to my portfolio to showcase my ability.
 
+#### User Stories
+
+As the user of this application I want:
+1. To have instructions on how to play the game and what the rules may be.
+2. The ability to mute any sounds that would be playing in the background.
+3. To be able to see my current and high score.
+4. increase the level of difficulty as the I progress through the game.
+5. A visually appealing game.
+6. The ability to play this game on multiple devices.
+
+## Design choices
 
 ## Testing 
 
 All testing of this project can be found here on [testing.md](testing.md) on a separate file.
-=======
-## UX 
 
-### Project Goals
->>>>>>> 4ac5aa02ba5e5c73fce1bc06d8d5332dfa8cbc94
+
+  
