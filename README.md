@@ -21,6 +21,7 @@
     - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
+        - [**Educational Credit**](#educational-credit)
     - [**Acknowledgements**](#acknowledgements)
 
 ## UX 
