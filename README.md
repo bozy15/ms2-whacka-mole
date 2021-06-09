@@ -73,6 +73,8 @@ As the user of this application I want:
 **Audio files**
 
 - Audio plays in the background as the user starts the game as without the audio the game feels very one dimensional, the audio adds some sub-conscious entertainment and keeps the player more immersed.
+    > *"Nacke,  Grimshaw  and  Lindley asked  participants to play a fast-paced, immersive first-person shooter (FPS) game  modification,  in  which  sound  (on/off )  and  music  (on/off )  were  manipulated. Result showed that more positive or neutral dimensions of  the  experience  were  experienced  more  positively  when  the  sound  of  the  game  was  playing."* 
+    - The full research paper is linked here [Journal of Psychology & Psychotherapy](https://www.longdom.org/open-access/the-influence-of-background-music-of-video-games-on-immersion-2161-0487-1000191.pdf)
 
 - A snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
 
