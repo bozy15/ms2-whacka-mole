@@ -103,7 +103,9 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - [Code Institute](https://www.codeinstitute.net/) Where 99% of this developers knowledge of JavaScript comes from.
 
-- [DailyJS](https://medium.com/dailyjs/how-to-build-a-simple-sprite-animation-in-javascript-b764644244aa) For helping with this developer to understand how to animate a sprite sheet and why its more efficient.  
+- [DailyJS](https://medium.com/dailyjs/how-to-build-a-simple-sprite-animation-in-javascript-b764644244aa) For helping with this developer to understand how to animate a sprite sheet and why its more efficient.
+
+- [CSS-tricks](https://css-tricks.com/best-way-implement-wrapper-css/) Clarifying why to use wrapper class over container class.
 
 ### Content
 
