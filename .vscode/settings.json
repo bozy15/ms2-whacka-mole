@@ -22,4 +22,13 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Visual Studio Dark",
    "editor.defaultFormatter": "HookyQR.beautify",
+   "spellright.language": [
+      "en"
+   ],
+   "spellright.documentTypes": [
+      "markdown",
+      "latex",
+      "plaintext",
+      "html"
+   ],
 }
