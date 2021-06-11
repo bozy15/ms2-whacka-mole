@@ -13,10 +13,12 @@
 <body>
     <!-- This container wraps around all content -->
     <div class="wrapper">
-        <div class="current-score">0</div>
-        <div class="timer"></div>
-        <div class="begin-button"></div>
-
+        <!-- Header section holds content at top of the page to prevent overflow-->
+        <header>
+            <div class="current-score">1000</div>
+            <div class="timer">TIMER</div>
+            <button class="start-button">Start</button>
+        </header>
         <!-- Container that holds the main interactive area -->
         <div class="game">
 
@@ -52,7 +54,7 @@
     </div>
 
     <!-- JS link -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
