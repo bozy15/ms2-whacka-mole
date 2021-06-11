@@ -62,6 +62,12 @@ As the user of this application I want:
 
 **Styling**
 
+- Font used in this Project is [Press Start 2P]https://fonts.google.com/specimen/Press+Start+2P#standard-styles(Press Start 2P). This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
+
+ - Main color pallet used ..
+
+ - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
+
 **Background**
 
 - The background image/colors used were to help make the game feel like it is played on the ground with the moles digging underneath the soil and popping up before being bonked on the head.
@@ -93,7 +99,7 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - Mole sprite sheet is open source content retrieved from [lepunk]https://github.com/lepunk/react-native-videos/blob/whack-a-mole/WhackAMole/assets/img/sprites.png and is free to use.
 
-- Background image was sourced from [FreePik](https://www.freepik.com/vectors/tree ) the tree vector was created by brgfx
+- Background image was sourced from [lepunk](https://github.com/lepunk/react-native-videos/blob/whack-a-mole/WhackAMole/assets/img/background.png) and is free to use.
 
 #### Audio
 
