@@ -1,3 +1,6 @@
+/* Google fonts: https://fonts.google.com/specimen/Press+Start+2P#standard-styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* 
    Targets all elements and includes the padding and border
    in an elements total width and height 
@@ -10,11 +13,41 @@
 
 /* Uses absolute positioning to center the container */
 .wrapper {
+    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
     width: 960px;
-    height: 780px;
+    height: 705px;
     border: 2px solid black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-image: url("../images/background-img.png");
+}
+
+header {
+    display: flex;
+    height: 9%;
+}
+
+.current-score {
+    font-size: 2em;
+    margin-top: .5em;
+    color: blanchedalmond;
+    text-indent: 3em;
+    text-shadow: 1px 0px 4px black;
+}
+
+.timer {
+    color: blanchedalmond;
+    margin-top: .5em;
+    text-indent: 5em;
+    text-shadow: 1px 0px 4px black;
+    font-size: 2em;
+}
+
+.start-button {
+   padding: 0 .5em;
+   margin: 1em 0;
+   position: relative;
+   left: 20em;
 }
