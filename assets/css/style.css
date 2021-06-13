@@ -18,7 +18,7 @@ body {
 }
 
 br {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Uses absolute positioning to center the container */
@@ -26,7 +26,7 @@ br {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   width: 90%;
   height: 90%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -67,6 +67,7 @@ header {
   top: inherit;
   left: inherit;
   transform: inherit;
+  z-index: 201; /* Pushes the game card to the top so it can always be interacted with */
 }
 
 .game-card-heading {
@@ -83,7 +84,7 @@ header {
 }
 
 .button-container {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .start-button {
@@ -109,6 +110,50 @@ header {
 }
 /* Hides the game card when the start button is clicked */
 section.game-card-hide {
-    visibility: hidden;
-    z-index: 0;
+  visibility: hidden;
+  z-index: 0;
+}
+
+/* Game, holes and moles */
+.game {
+  /*border: 2px solid brown; /* Used to help with layout of game area */
+  width: 100%;
+  height: 91%;
+  position: relative;
+  display: flex; /* display and flex-wrap used contain the holes is .game */
+  flex-wrap: wrap;
+  z-index: 200; /* Pushes the game section to the top so it can always be interacted with */
+}
+
+.hole {
+  /*border: 2px dotted blue; /* Used to help with layout */
+  flex: 1 33.3%; /* Flex-grow and flex-basis to evenly portion the holes: https://css-tricks.com/almanac/properties/f/flex/ */
+  position: relative;
+}
+
+.hole::after {
+  content: "";
+  display: block;
+  width: 168px;
+  height: 88px;
+  background-image: url("../images/mole_hole.png");
+  position: absolute;
+  top: 121px;
+  left: 99px;
+}
+
+.hole1, .hole2, .hole3 {  /* drops the top 3 holes down  */
+    top: 2rem;
+}
+
+.hole1, .hole4, .hole7 {  /* pushes the left 3 holes to the right  */
+    left: 3rem;
+}
+
+.hole3, .hole6, .hole9 {  /* pushes the right 3 holes to the left  */
+    right: 4rem;
+}
+
+.hole7, .hole8, .hole9 {  /* pushes the bottom 3 holes up  */
+    bottom: 32px;
 }
