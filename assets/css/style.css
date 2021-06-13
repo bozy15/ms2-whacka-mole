@@ -17,11 +17,15 @@ body {
   background-image: url(../images/background-img.png);
 }
 
+br {
+    margin-bottom: 1rem;
+}
+
 /* Uses absolute positioning to center the container */
 .wrapper {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  width: 960px;
-  height: 705px;
+  width: 90%;
+  height: 90%;
   border: 2px solid black;
   position: absolute;
   top: 50%;
@@ -53,36 +57,58 @@ header {
 
 /* Start game card */
 .game-card-info {
+  width: 50%;
+  height: 80%;
   border: 1px solid black;
-  width: 70%;
-  height: 60%;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(222, 184, 135, 0.85);
   position: absolute; /* Absolute positiong used to center card inside wrapper */
   top: inherit;
   left: inherit;
   transform: inherit;
 }
 
+.game-card-heading {
+  font-size: 1.5rem;
+  color: blanchedalmond;
+  text-shadow: 1px 2px 4px black;
+  padding: 1.85rem 0px;
+}
+.game-story,
+.game-instructions {
+  font-size: 0.75rem;
+  color: white;
+  text-shadow: -1px 1px 4px black;
+}
+
+.button-container {
+    margin-top: 3rem;
+}
+
 .start-button {
-    color: blanchedalmond;
-    font-family: inherit;
-    padding: 0 0.5em;
-    position: relative;
-    top: 15rem;
-    left: 18rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-    border-radius: 0.5rem;
-    box-shadow: 1px 0px 4px black;
-  }
-  /* Styles the start button when the mouse hovers over */
-  .start-button:hover {
-    color: rgba(0, 0, 0, 0.2);
-    background-color: blanchedalmond;
-    box-shadow: 1px 0px 4px black;
-  }
-  
-  /* Styles the start button when the mouse clicks the button */
-  .start-button:active {
-    border: 1px solid gray;
-    text-shadow: 0px 0px 0px grey;
-  }
+  color: white;
+  font-family: inherit;
+  padding: 0 0.5em;
+  background-color: rgba(0, 0, 0, 0.13);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 4px black;
+}
+/* Styles the start button when the mouse hovers over */
+.start-button:hover {
+  color: rgba(0, 0, 0, 0.2);
+  background-color: blanchedalmond;
+  box-shadow: 1px 0px 4px black;
+}
+
+/* Styles the start button when the mouse clicks the button */
+.start-button:active {
+  border: 1px solid gray;
+  text-shadow: 0px 0px 0px grey;
+}
+/* Hides the game card when the start button is clicked */
+section.game-card-hide {
+    visibility: hidden;
+    z-index: 0;
+}
