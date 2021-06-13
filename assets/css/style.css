@@ -1,53 +1,88 @@
 /* Google fonts: https://fonts.google.com/specimen/Press+Start+2P#standard-styles */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /* 
    Targets all elements and includes the padding and border
    in an elements total width and height 
 */
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/background-img.png);
 }
 
 /* Uses absolute positioning to center the container */
 .wrapper {
-    font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-    width: 960px;
-    height: 705px;
-    border: 2px solid black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url("../images/background-img.png");
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  width: 960px;
+  height: 705px;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/background-img.png");
 }
 
 header {
-    display: flex;
-    height: 9%;
+  display: flex;
+  height: 9%;
 }
 
 .current-score {
-    font-size: 2em;
-    margin-top: .5em;
-    color: blanchedalmond;
-    text-indent: 3em;
-    text-shadow: 1px 0px 4px black;
+  font-size: 2em;
+  margin-top: 0.5em;
+  color: blanchedalmond;
+  text-indent: 3em;
+  text-shadow: 1px 0px 4px black;
 }
 
 .timer {
-    color: blanchedalmond;
-    margin-top: .5em;
-    text-indent: 5em;
-    text-shadow: 1px 0px 4px black;
-    font-size: 2em;
+  color: blanchedalmond;
+  margin-top: 0.5em;
+  text-indent: 6em;
+  text-shadow: 1px 0px 4px black;
+  font-size: 2em;
+}
+
+/* Start game card */
+.game-card-info {
+  border: 1px solid black;
+  width: 70%;
+  height: 60%;
+  position: absolute; /* Absolute positiong used to center card inside wrapper */
+  top: inherit;
+  left: inherit;
+  transform: inherit;
 }
 
 .start-button {
-   padding: 0 .5em;
-   margin: 1em 0;
-   position: relative;
-   left: 20em;
-}
+    color: blanchedalmond;
+    font-family: inherit;
+    padding: 0 0.5em;
+    position: relative;
+    top: 15rem;
+    left: 18rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 0px 4px black;
+  }
+  /* Styles the start button when the mouse hovers over */
+  .start-button:hover {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: blanchedalmond;
+    box-shadow: 1px 0px 4px black;
+  }
+  
+  /* Styles the start button when the mouse clicks the button */
+  .start-button:active {
+    border: 1px solid gray;
+    text-shadow: 0px 0px 0px grey;
+  }
