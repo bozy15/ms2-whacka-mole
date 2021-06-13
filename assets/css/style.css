@@ -140,10 +140,11 @@ section.game-card-hide {
   display: block;
   width: 168px;
   height: 88px;
-  background-image: url("../images/mole_hole.png");
+  background-image: url("../images/mole-hole.png");
   position: absolute;
   top: 121px;
-  left: 99px;
+  left: 33%;
+  z-index: 3;
 }
 
 .hole1, .hole2, .hole3 {  /* drops the top 3 holes down  */
@@ -160,4 +161,19 @@ section.game-card-hide {
 
 .hole7, .hole8, .hole9 {  /* pushes the bottom 3 holes up  */
     bottom: 32px;
+}
+
+.mole {
+  background: url("../images/mole.png") center / 45% no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 2;
+  top: 2.5rem;
+  left: .625rem;
+}
+
+.mole.up .mole {
+  top: 0;
 }
