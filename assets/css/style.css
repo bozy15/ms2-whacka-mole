@@ -41,6 +41,7 @@ header {
 
 .current-score {
   font-size: 2em;
+  display: inline-block;
   margin-top: 0.5em;
   color: blanchedalmond;
   text-indent: 3em;
@@ -49,6 +50,9 @@ header {
 
 .timer {
   color: blanchedalmond;
+  display: inline-block;
+  position: absolute;
+  right: 3rem;
   margin-top: 0.5em;
   text-indent: 6em;
   text-shadow: 1px 0px 4px black;

@@ -29,6 +29,10 @@
       "markdown",
       "latex",
       "plaintext",
-      "html"
+      "html",
+      "javascript"
    ],
+   "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
 }
