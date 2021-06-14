@@ -64,8 +64,7 @@ As the user of this application I want:
 
 - Font used in this Project is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
- - Main color pallet used 
-  <div><img src="assets/images/palette.png" alt="color-palette" width="200"/></div>
+ - Main color pallet used Throughout the game - <img src="assets/images/palette.png" alt="color-palette" width="150"/>
 
  - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
 
@@ -107,6 +106,8 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 #### Audio
 
 ### Code
+
+- Function on line 2 of main.js taken from [StackoverFlow](https://stackoverflow.com/questions/1012140/delaying-a-jquery-script-until-everything-else-has-loaded) written by Jose Basilio
 
 #### Educational Credit
 
