@@ -1,10 +1,12 @@
 // Runs game once DOM is fully loaded
 $(document).ready(function () {
+
   // Temporary function to hide .game-card-info while building the game
   $(".game-card-show").click(() => {
     $(".game-card-show").addClass("game-card-hide");
     console.log("It disappeared");
   });
+
   // unchanging variables
   const holes = $(".hole");
   const moles = $(".mole");
@@ -41,5 +43,27 @@ $(document).ready(function () {
       if (!timeUp) comeUp(); // If timeUp is false run comeUp() again
     }, time); // Amount of time we wait before goDown() is called
   }
-  comeUp();
+
+  function startGame() {
+    countdown = startTime / 1000; // Assigns 20s to countdown
+    $(timer).append(countdown); // Puts the time in the HTML
+    score = 0;
+    $(currentScore).append(score);
+    timeUp = false;
+    comeUp();
+    setTimeout ( () => {
+      timeUp = true;
+    }, 30000); 
+ 
+  let startCountdown = setInterval(() => {
+      countdown -= 1;
+      timer.textContent = countdown;
+      if (countdown < 0) {
+        countdown = 0;
+        clearInterval(startCountdown);
+        timer.textContent = "Nice Job!"
+      } 
+    }, 1000);
+    }
+    $(startButton).on("click", startGame);
 });
