@@ -62,9 +62,9 @@ As the user of this application I want:
 
 **Styling**
 
-- Font used in this Project is [Press Start 2P]https://fonts.google.com/specimen/Press+Start+2P#standard-styles(Press Start 2P). This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
+- Font used in this Project is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
- - Main color pallet used ![Color Palette](../images/palette.png)
+ - Main color pallet used ![Color Palette](images/palette.png)
 
  - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
 
