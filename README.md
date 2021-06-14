@@ -54,7 +54,7 @@ As the user of this application I want:
 5. A visually appealing game.
 6. The ability to play this game on multiple devices.
 
-### Design choices
+### Design
 
 **Colors**
 
