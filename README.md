@@ -64,7 +64,7 @@ As the user of this application I want:
 
 - Font used in this Project is [Press Start 2P]https://fonts.google.com/specimen/Press+Start+2P#standard-styles(Press Start 2P). This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
- - Main color pallet used ..
+ - Main color pallet used ![Color Palette](../images/palette.png)
 
  - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
 
@@ -75,6 +75,8 @@ As the user of this application I want:
 **Sprites**
 
 - The game uses two mole Sprites. The first sprite is an innocent looking mole that appears from within the hole and the second sprite is used for when the user hits the mole to the give effect the mole has be bonked.
+
+- A sprite of a mole hole was edited with [pixlr](https://pixlr.com/x/) and was used to overlay the mole sprite to assist in the appearance of the mole descending underground.
 
 **Audio files**
 
