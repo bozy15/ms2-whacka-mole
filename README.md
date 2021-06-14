@@ -64,7 +64,8 @@ As the user of this application I want:
 
 - Font used in this Project is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
- - Main color pallet used <img src="assets/images/palette.png" alt="color-palette" width="200"/>
+ - Main color pallet used 
+  <div><img src="assets/images/palette.png" alt="color-palette" width="200"/></div>
 
  - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
 
