@@ -45,7 +45,7 @@ $(document).ready(function () {
   }
 
   function startGame() {
-    countdown = startTime / 1000; // Assigns 20s to countdown
+    countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
     $(currentScore).append(score);
@@ -57,8 +57,8 @@ $(document).ready(function () {
  
   let startCountdown = setInterval(() => {
       countdown -= 1;
-      timer.textContent = countdown;
-      if (countdown < 0) {
+      $(timer).html(countdown);
+      if (countdown < 1) {
         countdown = 0;
         clearInterval(startCountdown);
         timer.textContent = "Nice Job!"
