@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   // Function to run the game when the start button is clicked
   function startGame() {
-    countdown = startTime / 1000; // Assigns 30s to countdown
+    countdown = startTime / 1000; // Assigns 30s to countdown 
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
     $(currentScore).append(score); // Adds the starting score to HTML
@@ -59,7 +59,7 @@ $(document).ready(function () {
     let startTimer = setInterval(() => {
       // decrement the timer
       countdown -= 1;
-      $(timer).html(countdown);
+      $(timer).text(`Time Left: ${countdown}` );     
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
