@@ -1,6 +1,5 @@
 // Runs game once DOM is fully loaded
 $(document).ready(function () {
-
   // Temporary function to hide .game-card-info while building the game
   $(".game-card-show").click(() => {
     $(".game-card-show").addClass("game-card-hide");
@@ -44,26 +43,44 @@ $(document).ready(function () {
     }, time); // Amount of time we wait before goDown() is called
   }
 
+  // Function to run the game when the start button is clicked
   function startGame() {
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
-    $(currentScore).append(score);
+    $(currentScore).append(score); // Adds the starting score to HTML
     timeUp = false;
-    comeUp();
-    setTimeout ( () => {
+    comeUp(); // Calls function to make moles pop up and down
+    setTimeout(() => {
+      // Sets timeUp as true after 30 seconds which will end the game
       timeUp = true;
-    }, 30000); 
- 
-  let startCountdown = setInterval(() => {
+    }, startTime);
+
+    let startTimer = setInterval(() => {
+      // decrement the timer
       countdown -= 1;
       $(timer).html(countdown);
       if (countdown < 1) {
         countdown = 0;
-        clearInterval(startCountdown);
-        timer.textContent = "Nice Job!"
-      } 
+        clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
+        $(timer).html("Nice Job!");
+      }
     }, 1000);
-    }
-    $(startButton).on("click", startGame);
-});
+  }
+
+  // Increment score when mole is clicked
+  function whackaMole(e) {
+    score++; // Increments score by 1 when mole is clicked
+    $(this).css("background-image", "url(assets/images/mole-hit.png)"); // Changes image to indicate mole was hit
+    $(this).css("pointer-events", "none"); // Prevents clicking the same mole twice to score extra points
+    setTimeout(() => {
+      $(this).css("background-image", "url(assets/images/mole.png)");
+    }, 900); // Changes image back to mole after 900ms
+    $(currentScore).html(score);// Appends the score to the .current-score div
+  }
+
+  // Event listeners
+  $(startButton).on("click", startGame); // Starts game after start button is pressed
+  $(moles).on("click", whackaMole);
+  console.table(whackaMole);
+}); // End of DOM ready function
