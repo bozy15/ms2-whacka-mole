@@ -175,9 +175,10 @@ section.game-card-hide {
   height: 100%;
   transition: 0.5s;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 100%; /* Hides the mole */
 }
+
 
 .hole.up .mole {
   top: 28%; /* JS will call this class making the moles pop up */
