@@ -105,9 +105,14 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 #### Audio
 
+- Audio used for whacking moles was taken from [FreeSound](https://freesound.org/people/Qat/sounds/114684/)
+
+- Background music taken from [chosic](https://www.chosic.com/download-audio/?t=24995&tag=Games) and was created by Komiku.
 ### Code
 
 - Function on line 2 of main.js taken from [StackoverFlow](https://stackoverflow.com/questions/1012140/delaying-a-jquery-script-until-everything-else-has-loaded) written by Jose Basilio
+
+- How to play audio in JavaScript was taken from [StackoverFlow](https://stackoverflow.com/questions/9419263/how-to-play-audio) written by Uri.
 
 #### Educational Credit
 
