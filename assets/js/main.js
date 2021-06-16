@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   // Function to run the game when the start button is clicked
   function startGame() {
-    countdown = startTime / 1000; // Assigns 30s to countdown 
+    countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
     $(currentScore).append(score); // Adds the starting score to HTML
@@ -59,7 +59,7 @@ $(document).ready(function () {
     let startTimer = setInterval(() => {
       // decrement the timer
       countdown -= 1;
-      $(timer).text(`Time Left: ${countdown}` );     
+      $(timer).text(`Time Left: ${countdown}`);
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
@@ -75,12 +75,15 @@ $(document).ready(function () {
     $(this).css("pointer-events", "none"); // Prevents clicking the same mole twice to score extra points
     setTimeout(() => {
       $(this).css("background-image", "url(assets/images/mole.png)");
-    }, 900); // Changes image back to mole after 900ms
-    $(currentScore).html(score);// Appends the score to the .current-score div
+    }, 800); // Changes image back to mole after 800ms
+    setTimeout( () => {
+        $(this).css("pointer-events", "auto"); // Resets pointer events after 600ms
+    }, 600);
+    $(currentScore).html(score); // Appends the score to the .current-score div
   }
 
   // Event listeners
   $(startButton).on("click", startGame); // Starts game after start button is pressed
   $(moles).on("click", whackaMole);
-  console.table(whackaMole);
 }); // End of DOM ready function
+
