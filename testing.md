@@ -43,5 +43,9 @@
 - At first I assumed there was an error in my whackaMole() but everything seemed to be correct inside. Next, I thought it was my Event listener but that was correct. I ran the game again and opened the browser console and tried clicking on a few moles to see if it would throw up some errors and still nothing came up.
     - Fix: Since no errors were throw in the console I felt confidant that my JS was functioning well and it was either my index.html or style.css. I remembered that I had set the hole's image z-index to -1 which put it behind the html document and so couldn't be clicked on. I removed the z-index which put the mole sprite above the hole image but I find that it isn't very noticeable.
 
+5. When a mole is whacked I noticed that if you clicked a number of times it would increment the score after each click. I wanted to have one score per hit to maintain the challenge.
+
+- I used a jQuery selector to add the CSS "pointer-events: none;" to the .hole.up .mole element. This sort of worked as it would prevent multiple clicks but unfortunately it prevented the mole being clicked on if it came up in the same hole again.
+    -Fix: I created a setTimeOut() and added $(this).css("pointer-events", "auto") to reset the CSS after 600ms. 
 
 #### UnSolved Bugs
