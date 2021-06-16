@@ -76,7 +76,7 @@ $(document).ready(function () {
   function whackaMole(e) {
     score++; // Increments score by 1 when mole is clicked
 
-    if (score % 10 === 0) {
+    if (score % 10 === 0) {// Adds an extra 10s after the score reaches multiples of 10
       countdown += 10;
     } 
     $(this).css("background-image", "url(assets/images/mole-hit.png)"); // Changes image to indicate mole was hit
