@@ -46,6 +46,14 @@
 5. When a mole is whacked I noticed that if you clicked a number of times it would increment the score after each click. I wanted to have one score per hit to maintain the challenge.
 
 - I used a jQuery selector to add the CSS "pointer-events: none;" to the .hole.up .mole element. This sort of worked as it would prevent multiple clicks but unfortunately it prevented the mole being clicked on if it came up in the same hole again.
-    -Fix: I created a setTimeOut() and added $(this).css("pointer-events", "auto") to reset the CSS after 600ms. 
+    - Fix: I created a setTimeOut() and added $(this).CSS("pointer-events", "auto") to reset the CSS after 600ms. 
+
+6. I wanted to add the ability to extend gameplay by reaching a score of and any multiple of 10.
+
+- I put an if statement in my WhackaMole(e) function that asked if (score % 10 === 0) { countdown += 10 }.
+<img src="assets\images\bug-fix5.png" alt="Screenshot of if statement" width="120"/>
+ When I ran the game and reached a score of 10 the timer had an extra 10 seconds added on but my issue was that even though an extra 10 seconds were added on the original countdown would still be running and would end the comeUp() function.
+     - Fix: I soon realized the reason the countdown timer wasn't being updated is that I had incremented the extra 10s to far down in the scope that the startGame() had already run so I replaced the setTimeOut() I had in the startGame() with a function that had an if statement that would check to see the countdown timer had reached a value less than 1 and if not it would run the function again every 1000ms until the statement was true and then it return the value of timeUp as true which would end the game.
+     <img src="assets\images\bug-fix4.png" alt="Screenshot of function that solved the issue in code" width="120"/>
 
 #### UnSolved Bugs
