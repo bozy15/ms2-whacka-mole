@@ -12,6 +12,8 @@ $(document).ready(function () {
   const timer = $(".timer");
   const currentScore = $(".current-score");
   const startButton = $(".start-button");
+  const whackAudio = new Audio("assets/sounds/whack.mp3")
+  const backgroundAudio = new Audio("assets/sounds/background-music.mp3")
 
   // Dynamically changing variables
   let sameHole;
@@ -45,6 +47,7 @@ $(document).ready(function () {
 
   // Function to run the game when the start button is clicked
   function startGame() {
+    backgroundAudio.play()
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
@@ -75,7 +78,7 @@ $(document).ready(function () {
   // Increment score when mole is clicked
   function whackaMole(e) {
     score++; // Increments score by 1 when mole is clicked
-
+    whackAudio.play()
     if (score % 10 === 0) {// Adds an extra 10s after the score reaches multiples of 10
       countdown += 10;
     } 
