@@ -16,7 +16,7 @@ $(document).ready(function () {
   // Dynamically changing variables
   let sameHole;
   let timeUp = false;
-  let startTime = 30000;
+  let startTime = 20000;
   let score = 0;
   let countdown;
 
@@ -51,10 +51,14 @@ $(document).ready(function () {
     $(currentScore).append(score); // Adds the starting score to HTML
     timeUp = false;
     comeUp(); // Calls function to make moles pop up and down
-    setTimeout(() => {
-      // Sets timeUp as true after 30 seconds which will end the game
-      timeUp = true;
-    }, startTime);
+    function checkTime() { // Function to check if timer has reached 0
+      if (countdown < 1) {
+        timeUp = true;
+      } else {
+        setTimeout(checkTime, countdown * 1000); // if not check again every 1s
+      }
+    }
+    checkTime(); // calls function so it runs
 
     let startTimer = setInterval(() => {
       // decrement the timer
@@ -71,19 +75,22 @@ $(document).ready(function () {
   // Increment score when mole is clicked
   function whackaMole(e) {
     score++; // Increments score by 1 when mole is clicked
+
+    if (score % 10 === 0) {
+      countdown += 10;
+    } 
     $(this).css("background-image", "url(assets/images/mole-hit.png)"); // Changes image to indicate mole was hit
     $(this).css("pointer-events", "none"); // Prevents clicking the same mole twice to score extra points
     setTimeout(() => {
       $(this).css("background-image", "url(assets/images/mole.png)");
     }, 800); // Changes image back to mole after 800ms
-    setTimeout( () => {
-        $(this).css("pointer-events", "auto"); // Resets pointer events after 600ms
+    setTimeout(() => {
+      $(this).css("pointer-events", "auto"); // Resets pointer events after 600ms
     }, 600);
-    $(currentScore).html(score); // Appends the score to the .current-score div
+    $(currentScore).text(`Score: ${score}`); // Appends the score to the .current-score div
   }
 
   // Event listeners
   $(startButton).on("click", startGame); // Starts game after start button is pressed
   $(moles).on("click", whackaMole);
 }); // End of DOM ready function
-
