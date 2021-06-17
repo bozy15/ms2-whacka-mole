@@ -12,8 +12,8 @@ $(document).ready(function () {
   const timer = $(".timer");
   const currentScore = $(".current-score");
   const startButton = $(".start-button");
-  const whackAudio = new Audio("assets/sounds/whack.mp3")
-  const backgroundAudio = new Audio("assets/sounds/background-music.mp3")
+  const whackAudio = new Audio("assets/sounds/whack.mp3");
+  const backgroundAudio = new Audio("assets/sounds/background-music.mp3");
 
   // Dynamically changing variables
   let sameHole;
@@ -32,6 +32,18 @@ $(document).ready(function () {
     sameHole = hole; // Assigns selected hole to check in the if statement
     return hole;
   }
+  function comeUpFaster() {
+    // Chooses random time between 400ms and 1.4s
+    const fasterTime = Math.random() * 1400 + 400;
+    const holeUp = findHole(holes); // Selects hole chosen by findHole()
+    holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
+
+    // Function makes moles do down if they haven't been hit
+    setTimeout(() => {
+      holeUp.classList.remove("up");
+      if (!timeUp) comeUpFaster(); // If timeUp is false run comeUp() again
+    }, fasterTime); // Amount of time we wait before moles go down
+  }
   // Tells the moles to pop up for selected amount of time
   function comeUp() {
     const time = Math.random() * 2000 + 500; // Chooses random time between 500ms and 2s
@@ -42,23 +54,26 @@ $(document).ready(function () {
     setTimeout(() => {
       holeUp.classList.remove("up");
       if (!timeUp) comeUp(); // If timeUp is false run comeUp() again
-    }, time); // Amount of time we wait before goDown() is called
+    }, time); // Amount of time we wait before moles go down
   }
 
   // Function to run the game when the start button is clicked
   function startGame() {
-    backgroundAudio.play()
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
     $(currentScore).append(score); // Adds the starting score to HTML
     timeUp = false;
-    comeUp(); // Calls function to make moles pop up and down
-    function checkTime() { // Function to check if timer has reached 0
-      if (countdown < 1) {
+    comeUp();
+    function checkTime() {
+      // Function to check if timer has reached 0
+      if (countdown === 0) {
         timeUp = true;
+        backgroundAudio.pause(); // Will pause Background audio when game ends
       } else {
-        setTimeout(checkTime, countdown * 1000); // if not check again every 1s
+        backgroundAudio.play(); // play Background audio while the game is running in a loop
+        backgroundAudio.loop = true;
+        setTimeout(checkTime, 1000); // if not check again every 1s
       }
     }
     checkTime(); // calls function so it runs
@@ -77,11 +92,12 @@ $(document).ready(function () {
 
   // Increment score when mole is clicked
   function whackaMole(e) {
+    whackAudio.play();
     score++; // Increments score by 1 when mole is clicked
-    whackAudio.play()
-    if (score % 10 === 0) {// Adds an extra 10s after the score reaches multiples of 10
+    if (score % 10 === 0) {
+      // Adds an extra 10s after the score reaches multiples of 10
       countdown += 10;
-    } 
+    }
     $(this).css("background-image", "url(assets/images/mole-hit.png)"); // Changes image to indicate mole was hit
     $(this).css("pointer-events", "none"); // Prevents clicking the same mole twice to score extra points
     setTimeout(() => {
