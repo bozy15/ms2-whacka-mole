@@ -64,7 +64,7 @@ As the user of this application I want:
 
 - Font used in this Project is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
- - Main color pallet used Throughout the game - <img src="assets/images/palette.png" alt="color-palette" width="150"/>
+ - Main color pallet used Throughout the game - <img src="assets/images/palette.png" alt="color-palette" width="300"/>
 
  - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air. 
 
@@ -74,18 +74,43 @@ As the user of this application I want:
 
 **Sprites**
 
-- The game uses two mole Sprites. The first sprite is an innocent looking mole that appears from within the hole and the second sprite is used for when the user hits the mole to the give effect the mole has be bonked.
+- The game uses 4 mole Sprites. The first sprite is an innocent looking mole that appears from within the hole. The second sprite is used for when the user hits the mole to the give effect the mole has be bonked. The third sprite is used when the user gets to a certain score and the gameplay increases in speed and the mole image is changed to make them look mad. The last mole is used for the final difficulty which increases the speed again after a certain score is reached and the new mole image makes them look very angry to give the use the sense that whacking the moles is actually bothering them.
 
 - A sprite of a mole hole was edited with [pixlr](https://pixlr.com/x/) and was used to overlay the mole sprite to assist in the appearance of the mole descending underground.
 
 **Audio files**
 
-- Audio plays in the background as the user starts the game as without the audio the game feels very one dimensional, the audio adds some sub-conscious entertainment and keeps the player more immersed.
+- Audio plays in the background on a loop until the game ends as without the audio the game feels very one dimensional, the audio adds some sub-conscious entertainment and keeps the player more immersed.
     > *"Nacke,  Grimshaw  and  Lindley asked  participants to play a fast-paced, immersive first-person shooter (FPS) game  modification,  in  which  sound  (on/off )  and  music  (on/off )  were  manipulated. Result showed that more positive or neutral dimensions of  the  experience  were  experienced  more  positively  when  the  sound  of  the  game  was  playing."* 
     - The full research paper is linked here [Journal of Psychology & Psychotherapy](https://www.longdom.org/open-access/the-influence-of-background-music-of-video-games-on-immersion-2161-0487-1000191.pdf)
 
 - A snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
 
+###
+
+The wireframes were created using [Balsamiq](https://balsamiq.com/) during the design process of this project.
+
+## Features
+
+### Existing Features
+
+### Features to Implement
+
+## Technologies Used
+
+- This project used HTML5, CSS3 and JavaScript.
+- [jQuery](https://jquery.com/)
+    - Used in this project to simplify manipulation of the DOM.
+- [BootStrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+    - Used to simplify the structure of this project and assist in responsiveness.
+- [Google Fonts](https://fonts.google.com/)
+    - Used in this project to style the text.
+- [VScode](https://code.visualstudio.com/)
+    - This developer used VScode as the IDE to build the game.
+    - **Prettier** extension used to help with formatting code.
+    - **Spell Right** was used to assist with spell checking.
+- [GitHub](https://github.com/)
+    - This project used GitHub to store project code.
 
 ## Testing 
 
@@ -99,7 +124,7 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 #### Images
 
-- Mole sprite sheet is open source content retrieved from [lepunk]https://github.com/lepunk/react-native-videos/blob/whack-a-mole/WhackAMole/assets/img/sprites.png and is free to use.
+- Mole sprite sheet is open source content retrieved from [lepunk](https://github.com/lepunk/react-native-videos/blob/whack-a-mole/WhackAMole/assets/img/sprites.png) and is free to use.
 
 - Background image was sourced from [lepunk](https://github.com/lepunk/react-native-videos/blob/whack-a-mole/WhackAMole/assets/img/background.png) and is free to use.
 
@@ -108,6 +133,7 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 - Audio used for whacking moles was taken from [FreeSound](https://freesound.org/people/Qat/sounds/114684/)
 
 - Background music taken from [chosic](https://www.chosic.com/download-audio/?t=24995&tag=Games) and was created by Komiku.
+
 ### Code
 
 - Function on line 2 of main.js taken from [StackoverFlow](https://stackoverflow.com/questions/1012140/delaying-a-jquery-script-until-everything-else-has-loaded) written by Jose Basilio
@@ -122,7 +148,15 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - [CSS-tricks](https://css-tricks.com/best-way-implement-wrapper-css/) Clarifying why to use wrapper class over container class.
 
+### Acknowledgements
+
+- This developer's Mentor Caleb Mbakwe, who
+- Sean Young at Code Institute who was lead of the interactive-frontend channel at the time of this projects creation and helped guide this developer in the right direction when trying to increase difficulty while playing the game.
+
+
 ### Content
+
+- All text was written by the developer.
 
 
 
