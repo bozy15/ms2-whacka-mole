@@ -33,7 +33,7 @@ $(document).ready(function () {
     return hole;
   }
   function comeUpFastest() {
-    $(".mole").css(
+    $(".mole").css( // Changes image when this function runs
       "background-image",
       "url(assets/images/mole-very-angry.png)"
     );
@@ -50,7 +50,7 @@ $(document).ready(function () {
   }
 
   function comeUpFaster() {
-    $(".mole").css("background-image", "url(assets/images/mole-angry.png)");
+    $(".mole").css("background-image", "url(assets/images/mole-angry.png)");// changes image when this function runs
     // Chooses random time between 400ms and 1.4s
     const fasterTime = Math.random() * 1400 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
@@ -70,13 +70,13 @@ $(document).ready(function () {
     // Function makes moles do down if they haven't been hit
     setTimeout(() => {
       holeUp.classList.remove("up");
-      if (!timeUp) selectSpeed(); // If timeUp is false run comeUp() again
+      if (!timeUp) selectSpeed(); // If timeUp is false run selectSpeed() again
     }, time); // Amount of time we wait before moles go down
   }
   // Function that changes difficulty
   function selectSpeed() {
     setTimeout(() => {
-      if (score >= 10) {
+      if (score >= 10) { 
         comeUpFastest();
       } else if (score >= 5) {
         comeUpFaster();
@@ -115,7 +115,7 @@ $(document).ready(function () {
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
-        $(timer).html("Nice Job!");
+        $(timer).html(countdown);
       }
     }, 1000);
   }
