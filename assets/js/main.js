@@ -32,16 +32,33 @@ $(document).ready(function () {
     sameHole = hole; // Assigns selected hole to check in the if statement
     return hole;
   }
-  function comeUpFaster() {
-    // Chooses random time between 400ms and 1.4s
-    const fasterTime = Math.random() * 1400 + 400;
+  function comeUpFastest() {
+    $(".mole").css(
+      "background-image",
+      "url(assets/images/mole-very-angry.png)"
+    );
+    // Chooses random time between 400ms and 1.1s
+    const fastestTime = Math.random() * 1100 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
 
     // Function makes moles do down if they haven't been hit
     setTimeout(() => {
       holeUp.classList.remove("up");
-      if (!timeUp) comeUpFaster(); // If timeUp is false run comeUp() again
+      if (!timeUp) comeUpFastest(); // If timeUp is false run comeUpFastest() again
+    }, fastestTime); // Amount of time we wait before moles go down
+  }
+
+  function comeUpFaster() {
+    $(".mole").css("background-image", "url(assets/images/mole-angry.png)");
+    // Chooses random time between 400ms and 1.4s
+    const fasterTime = Math.random() * 1400 + 400;
+    const holeUp = findHole(holes); // Selects hole chosen by findHole()
+    holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
+    // Function makes moles do down if they haven't been hit
+    setTimeout(() => {
+      holeUp.classList.remove("up");
+      if (!timeUp) selectSpeed(); // If timeUp is false run selectSpeed() again
     }, fasterTime); // Amount of time we wait before moles go down
   }
   // Tells the moles to pop up for selected amount of time
@@ -53,8 +70,20 @@ $(document).ready(function () {
     // Function makes moles do down if they haven't been hit
     setTimeout(() => {
       holeUp.classList.remove("up");
-      if (!timeUp) comeUp(); // If timeUp is false run comeUp() again
+      if (!timeUp) selectSpeed(); // If timeUp is false run comeUp() again
     }, time); // Amount of time we wait before moles go down
+  }
+  // Function that changes difficulty
+  function selectSpeed() {
+    setTimeout(() => {
+      if (score >= 10) {
+        comeUpFastest();
+      } else if (score >= 5) {
+        comeUpFaster();
+      } else {
+        comeUp();
+      }
+    }, 100);
   }
 
   // Function to run the game when the start button is clicked
@@ -64,7 +93,8 @@ $(document).ready(function () {
     score = 0;
     $(currentScore).append(score); // Adds the starting score to HTML
     timeUp = false;
-    comeUp();
+    selectSpeed();
+
     function checkTime() {
       // Function to check if timer has reached 0
       if (countdown === 0) {
