@@ -33,7 +33,8 @@ $(document).ready(function () {
     return hole;
   }
   function comeUpFastest() {
-    $(".mole").css( // Changes image when this function runs
+    $(".mole").css(
+      // Changes image when this function runs
       "background-image",
       "url(assets/images/mole-very-angry.png)"
     );
@@ -50,7 +51,7 @@ $(document).ready(function () {
   }
 
   function comeUpFaster() {
-    $(".mole").css("background-image", "url(assets/images/mole-angry.png)");// changes image when this function runs
+    $(".mole").css("background-image", "url(assets/images/mole-angry.png)"); // changes image when this function runs
     // Chooses random time between 400ms and 1.4s
     const fasterTime = Math.random() * 1400 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
@@ -76,7 +77,7 @@ $(document).ready(function () {
   // Function that changes difficulty
   function selectSpeed() {
     setTimeout(() => {
-      if (score >= 10) { 
+      if (score >= 10) {
         comeUpFastest();
       } else if (score >= 5) {
         comeUpFaster();
@@ -91,7 +92,7 @@ $(document).ready(function () {
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
-    $(currentScore).append(score); // Adds the starting score to HTML
+    $(currentScore).text(`Score: ${score}`); // Adds the starting score to HTML
     timeUp = false;
     selectSpeed();
 
@@ -116,8 +117,13 @@ $(document).ready(function () {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
         $(timer).html(countdown);
+        endGameCard();
       }
     }, 1000);
+    // Function to display .end-game-card
+    function endGameCard() {
+      $(".end-game-card").addClass("end-game-show");
+    }
   }
 
   // Increment score when mole is clicked
@@ -139,7 +145,14 @@ $(document).ready(function () {
     $(currentScore).text(`Score: ${score}`); // Appends the score to the .current-score div
   }
 
+  
+
   // Event listeners
   $(startButton).on("click", startGame); // Starts game after start button is pressed
+  $("#play-again").click(() => {
+    $(".end-game-card").removeClass("end-game-show");
+    startGame();
+  });
   $(moles).on("click", whackaMole);
+
 }); // End of DOM ready function
