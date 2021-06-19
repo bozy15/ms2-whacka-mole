@@ -164,13 +164,6 @@ div.d-inline-block {
   box-shadow: 0px 0px 4px black;
 }
 
-.end-game-hide {
-  visibility: hidden;
-}
-
-section.end-game-show {
-  visibility: unset;
-}
 /* Styles the end game buttons when the mouse hovers over */
 .play-again:hover,
 .submit-button:hover {
@@ -186,6 +179,15 @@ section.end-game-show {
   text-shadow: 0px 0px 0px grey;
 }
 
+/* Hides End Game card */
+.end-game-hide {
+  visibility: hidden;
+}
+
+/* Shows end game card when game ends */
+section.end-game-show {
+  visibility: unset;
+}
 /* ----- Game, holes and moles ----- */
 .game {
   /*border: 2px solid brown; /* Used to help with layout of game area */
