@@ -32,14 +32,17 @@ $(document).ready(function () {
     sameHole = hole; // Assigns selected hole to check in the if statement
     return hole;
   }
+
+  // Hard difficulty
   function comeUpFastest() {
+    backgroundAudio.playbackRate = 1.4;
     $(".mole").css(
       // Changes image when this function runs
       "background-image",
       "url(assets/images/mole-very-angry.png)"
     );
-    // Chooses random time between 400ms and 1.1s
-    const fastestTime = Math.random() * 1100 + 400;
+    // Chooses random time between 400ms and 1s
+    const fastestTime = Math.random() * 1000 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
 
@@ -51,6 +54,7 @@ $(document).ready(function () {
   }
 
   function comeUpFaster() {
+    backgroundAudio.playbackRate = 1.2;
     $(".mole").css("background-image", "url(assets/images/mole-angry.png)"); // changes image when this function runs
     // Chooses random time between 400ms and 1.4s
     const fasterTime = Math.random() * 1400 + 400;
@@ -64,6 +68,8 @@ $(document).ready(function () {
   }
   // Tells the moles to pop up for selected amount of time
   function comeUp() {
+    backgroundAudio.playbackRate = 1;
+    $(".mole").css("background-image", "url(assets/images/mole.png)");
     const time = Math.random() * 2000 + 500; // Chooses random time between 500ms and 2s
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
@@ -81,13 +87,16 @@ $(document).ready(function () {
         comeUpFastest();
       } else if (score >= 5) {
         comeUpFaster();
+        console.log(comeUpFaster);
       } else {
         comeUp();
+        console.log(comeUp);
       }
     }, 100);
   }
 
   // Function to run the game when the start button is clicked
+
   function startGame() {
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
@@ -145,14 +154,15 @@ $(document).ready(function () {
     $(currentScore).text(`Score: ${score}`); // Appends the score to the .current-score div
   }
 
-  
+  function playAgain() {
+    startGame();
+  }
 
   // Event listeners
   $(startButton).on("click", startGame); // Starts game after start button is pressed
   $("#play-again").click(() => {
     $(".end-game-card").removeClass("end-game-show");
-    startGame();
+    playAgain();
   });
   $(moles).on("click", whackaMole);
-
 }); // End of DOM ready function
