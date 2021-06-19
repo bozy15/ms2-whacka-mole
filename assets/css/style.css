@@ -59,10 +59,10 @@ header {
   font-size: 2em;
 }
 
-/* Start game card */
+/* ----- Start game card ----- */
 .game-card-info {
   width: 50%;
-  height: 80%;
+  height: 70%;
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -100,6 +100,7 @@ header {
   border-radius: 0.5rem;
   box-shadow: 0px 0px 4px black;
 }
+
 /* Styles the start button when the mouse hovers over */
 .start-button:hover {
   color: rgba(0, 0, 0, 0.2);
@@ -112,13 +113,80 @@ header {
   border: 1px solid gray;
   text-shadow: 0px 0px 0px grey;
 }
+
 /* Hides the game card when the start button is clicked */
 section.game-card-hide {
   visibility: hidden;
   z-index: 0;
 }
 
-/* Game, holes and moles */
+/* ----- End game card ----- */
+.end-game-card {
+  width: 50%;
+  height: 60%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(222, 184, 135, 0.85);
+  position: absolute; /* Absolute positiong used to center card inside wrapper */
+  top: inherit;
+  left: inherit;
+  transform: inherit;
+  z-index: 201;
+}
+
+.end-game-heading {
+  font-size: 1.5rem;
+  color: blanchedalmond;
+  text-shadow: 1px 2px 4px black;
+  padding: 1.85rem 0px;
+}
+
+.score-name {
+  width: 40%;
+  padding-left: 0.25rem; /* Pushes placeholder text to right */
+  border-radius: revert;
+  box-shadow: 0px 0px 2px black;
+}
+div.d-inline-block {
+  padding-top: 1.75rem;
+}
+
+.play-again,
+.submit-button {
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0 0.5em;
+  background-color: rgba(0, 0, 0, 0.13);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 4px black;
+}
+
+.end-game-hide {
+  visibility: hidden;
+}
+
+section.end-game-show {
+  visibility: unset;
+}
+/* Styles the end game buttons when the mouse hovers over */
+.play-again:hover,
+.submit-button:hover {
+  color: rgba(0, 0, 0, 0.2);
+  background-color: blanchedalmond;
+  box-shadow: 1px 0px 4px black;
+}
+
+/* Styles the end game buttons when the mouse hovers clicks them */
+.play-again:active,
+.submit-button:active {
+  border: 1px solid gray;
+  text-shadow: 0px 0px 0px grey;
+}
+
+/* ----- Game, holes and moles ----- */
 .game {
   /*border: 2px solid brown; /* Used to help with layout of game area */
   width: 100%;
@@ -139,7 +207,6 @@ section.game-card-hide {
   background-repeat: no-repeat;
   background-size: 12rem;
   background-position-y: 8.5rem;
-
 }
 
 /* .hole::after {
@@ -153,20 +220,32 @@ section.game-card-hide {
   z-index: 3;
 }*/
 
-.hole1, .hole2, .hole3 {  /* drops the top 3 holes down  */
-    top: 2rem;
+.hole1,
+.hole2,
+.hole3 {
+  /* drops the top 3 holes down  */
+  top: 2rem;
 }
 
-.hole1, .hole4, .hole7 {  /* pushes the left 3 holes to the right  */
-    left: 3rem;
+.hole1,
+.hole4,
+.hole7 {
+  /* pushes the left 3 holes to the right  */
+  left: 3rem;
 }
 
-.hole3, .hole6, .hole9 {  /* pushes the right 3 holes to the left  */
-    right: 4rem;
+.hole3,
+.hole6,
+.hole9 {
+  /* pushes the right 3 holes to the left  */
+  right: 4rem;
 }
 
-.hole7, .hole8, .hole9 {  /* pushes the bottom 3 holes up  */
-    bottom: 32px;
+.hole7,
+.hole8,
+.hole9 {
+  /* pushes the bottom 3 holes up  */
+  bottom: 32px;
 }
 
 .mole {
@@ -178,7 +257,6 @@ section.game-card-hide {
   z-index: 0;
   top: 100%; /* Hides the mole */
 }
-
 
 .hole.up .mole {
   top: 28%; /* JS will call this class making the moles pop up */
