@@ -51,7 +51,7 @@
         <!-- End of Start game card -->
 
         <!-- End-game card -->
-        <section class="end-game-card end-game-show">
+        <section class="end-game-card end-game-hide text-center">
             <h2 class="text-center flex-wrap end-game-heading">
                 <p>Well Done!</p>
                 <p>You showed those moles not to mess with your garden</p>
@@ -61,11 +61,11 @@
                 <label for="score-name"></label>
                 <input class="score-name" type="text" name="name" id="score-name" placeholder="Name" required>
             </form>
-            <div class="play-again">
-                <button id="play-again">Play Again</button>
+            <div class="d-inline-block"> <!-- Uses BS display class -->
+                <button class="play-again" id="play-again">Play Again</button>
             </div>
-            <div class="submit-button text-center">
-                <button type="submit" id="submit-score">Submit</button>
+            <div class="d-inline-block"> <!-- Uses BS display class -->
+                <button class="submit-button" type="submit" id="submit-score">Submit</button>
             </div>
         </section>
         <!-- End of End-game card -->
@@ -102,6 +102,9 @@
                 <div class="mole"></div>
             </div>
         </div>
+        <footer>
+            <div class="mute-button"></div>
+        </footer>
     </div>
 
     <!-- jQuery CDN: https://code.jquery.com/ -->
