@@ -263,3 +263,29 @@ section.end-game-show {
 .hole.up .mole {
   top: 28%; /* JS will call this class making the moles pop up */
 }
+
+/* ----- Footer ----- */
+footer {
+  display: inline;
+  width: 100%;
+}
+
+.mute-button {
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
+  top: 11.3%;
+  z-index: 205;
+  color: blanchedalmond;
+  text-shadow: 2px 0px 6px black;
+}
+
+.mute-button:hover {
+  color: lightgray;
+  text-shadow: 2px 0px 8px black;
+}
+
+.mute-button:active {
+  color: blanchedalmond;
+  text-shadow: 2px 0px 6px black;
+}
