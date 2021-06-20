@@ -154,6 +154,8 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - [w3schools](https://www.w3schools.com/tags/av_prop_playbackrate.asp) How to increase playback speed. 
 
+- [StackoverFlow](https://stackoverflow.com/questions/4727263/get-second-child-using-jquery) How to select second child using jQuery.
+
 ### Acknowledgements
 
 - This developer's Mentor Caleb Mbakwe, who
