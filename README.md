@@ -103,6 +103,8 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
     - Used in this project to simplify manipulation of the DOM.
 - [BootStrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
     - Used to simplify the structure of this project and assist in responsiveness.
+- [FontAwesome](https://fontawesome.com/)
+    -Used in this project to place icons on the mute button.
 - [Google Fonts](https://fonts.google.com/)
     - Used in this project to style the text.
 - [VScode](https://code.visualstudio.com/)
@@ -140,6 +142,8 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - How to play audio in JavaScript was taken from [StackoverFlow](https://stackoverflow.com/questions/9419263/how-to-play-audio) written by Uri.
 
+- How mute and unmute audio was taken from [StackoverFlow](https://stackoverflow.com/questions/7798530/mute-and-unmute-button-toggle-html5-audio/7798585#7798585) written by Esailija.
+
 #### Educational Credit
 
 - [Code Institute](https://www.codeinstitute.net/) Where 99% of this developers knowledge of JavaScript comes from.
@@ -147,6 +151,8 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 - [DailyJS](https://medium.com/dailyjs/how-to-build-a-simple-sprite-animation-in-javascript-b764644244aa) For helping with this developer to understand how to animate a sprite sheet and why its more efficient.
 
 - [CSS-tricks](https://css-tricks.com/best-way-implement-wrapper-css/) Clarifying why to use wrapper class over container class.
+
+- [w3schools](https://www.w3schools.com/tags/av_prop_playbackrate.asp) How to increase playback speed. 
 
 ### Acknowledgements
 
