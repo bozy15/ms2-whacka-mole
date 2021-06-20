@@ -1,11 +1,5 @@
 // Runs game once DOM is fully loaded
 $(document).ready(function () {
-  // Temporary function to hide .game-card-info while building the game
-  $(".game-card-show").click(() => {
-    $(".game-card-show").addClass("game-card-hide");
-    console.log("It disappeared");
-  });
-
   // unchanging variables
   const holes = $(".hole");
   const moles = $(".mole");
@@ -35,7 +29,7 @@ $(document).ready(function () {
 
   // Hard difficulty
   function comeUpFastest() {
-    backgroundAudio.playbackRate = 1.4;
+    backgroundAudio.playbackRate = 1.4; // Increases speed of music
     $(".mole").css(
       // Changes image when this function runs
       "background-image",
@@ -54,7 +48,7 @@ $(document).ready(function () {
   }
 
   function comeUpFaster() {
-    backgroundAudio.playbackRate = 1.2;
+    backgroundAudio.playbackRate = 1.2; // Increases speed of music
     $(".mole").css("background-image", "url(assets/images/mole-angry.png)"); // changes image when this function runs
     // Chooses random time between 400ms and 1.4s
     const fasterTime = Math.random() * 1400 + 400;
@@ -68,7 +62,7 @@ $(document).ready(function () {
   }
   // Tells the moles to pop up for selected amount of time
   function comeUp() {
-    backgroundAudio.playbackRate = 1;
+    backgroundAudio.playbackRate = 1; // Plays audio at normal rate when playing again
     $(".mole").css("background-image", "url(assets/images/mole.png)");
     const time = Math.random() * 2000 + 500; // Chooses random time between 500ms and 2s
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
@@ -87,16 +81,13 @@ $(document).ready(function () {
         comeUpFastest();
       } else if (score >= 5) {
         comeUpFaster();
-        console.log(comeUpFaster);
       } else {
         comeUp();
-        console.log(comeUp);
       }
     }, 100);
   }
 
   // Function to run the game when the start button is clicked
-
   function startGame() {
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
@@ -105,8 +96,8 @@ $(document).ready(function () {
     timeUp = false;
     selectSpeed();
 
+    // Function to check if timer has reached 0
     function checkTime() {
-      // Function to check if timer has reached 0
       if (countdown === 0) {
         timeUp = true;
         backgroundAudio.pause(); // Will pause Background audio when game ends
@@ -121,7 +112,7 @@ $(document).ready(function () {
     let startTimer = setInterval(() => {
       // decrement the timer
       countdown -= 1;
-      $(timer).text(`Time Left: ${countdown}`);
+      $(timer).text(`Time Left: ${countdown}`); // Adds countdown to html
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
@@ -154,15 +145,39 @@ $(document).ready(function () {
     $(currentScore).text(`Score: ${score}`); // Appends the score to the .current-score div
   }
 
+  // Mute audio function
+  function muteAudio() {}
+
+  // Restarts the game when play again button is pressed
   function playAgain() {
     startGame();
   }
 
   // Event listeners
-  $(startButton).on("click", startGame); // Starts game after start button is pressed
+  // Starts game after start button is pressed
+  $(startButton).click(() => {
+    $(".game-card-show").addClass("game-card-hide");
+    startGame();
+  });
+  // Starts game after play again button is pressed
   $("#play-again").click(() => {
     $(".end-game-card").removeClass("end-game-show");
     playAgain();
   });
+  // Runs WhackaMole function when mole image is clicked
   $(moles).on("click", whackaMole);
+
+  // Mute button eventListener
+  $(".mute-button").click(() => {
+    volumeOn = "fas fa-volume-up";
+    volumeOff = "fas fa-volume-mute";
+    // if statement that changes icon used for mute button when clicked
+    if (backgroundAudio.muted) { 
+      $("#remove-icon").removeClass(volumeOn);
+      $("#remove-icon").addClass(volumeOff);
+    } else {
+      $("#remove-icon").addClass(volumeOn);
+    }
+    backgroundAudio.muted = !backgroundAudio.muted; // Toggles between true and false for .mute 
+  });
 }); // End of DOM ready function
