@@ -39,10 +39,19 @@ header {
   height: 9%;
 }
 
+.score-div {
+  display:inline-block;
+  font-size: 2rem;
+  color: blanchedalmond;
+  text-indent: 3rem;
+  text-shadow: 1px 0px 4px black;
+}
+
 .current-score {
-  font-size: 2em;
+  font-size: 2rem;
   display: inline-block;
   margin-top: 0.5em;
+  margin-left: -5.8rem;
   color: blanchedalmond;
   text-indent: 3em;
   text-shadow: 1px 0px 4px black;
