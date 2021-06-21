@@ -36,7 +36,6 @@ br {
 
 header {
   display: flex;
-  height: 9%;
 }
 
 .score-div {
@@ -68,7 +67,7 @@ header {
   font-size: 2em;
 }
 
-/* ----- Start game card ----- */
+/* ----- START GAME CARD----- */
 .game-card-info {
   width: 50%;
   border: 1px solid black;
@@ -129,7 +128,7 @@ section.game-card-hide {
   z-index: 0;
 }
 
-/* ----- End game card ----- */
+/* ----- END GAME CARD ----- */
 .end-game-card {
   width: 50%;
   border: 1px solid black;
@@ -195,8 +194,7 @@ section.end-game-show {
   visibility: unset;
 }
 
-
-/* ----- Game, holes and moles ----- */
+/* ----- GAME AREA, HOLES AND MOLES ----- */
 .game {
   /*border: 2px solid brown; /* Used to help with layout of game area */
   width: 100%;
@@ -215,10 +213,9 @@ section.end-game-show {
   background: url("../images/mole-hole.png");
   background-position: bottom;
   background-repeat: no-repeat;
- /* background-size: 12rem; */
+  /* background-size: 12rem; */
   background-position-y: 112%;
 }
-
 
 .hole1,
 .hole2,
@@ -262,7 +259,7 @@ section.end-game-show {
   top: 28%; /* JS will call this class making the moles pop up */
 }
 
-/* ----- Footer ----- */
+/* ----- FOOTER ----- */
 footer {
   display: inline;
   width: 100%;
@@ -286,4 +283,64 @@ footer {
 .mute-button:active {
   color: blanchedalmond;
   text-shadow: 2px 0px 6px black;
+}
+
+/* ----- BREAKPOINTS ----- */
+/* mobile devices  */
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+  body {
+    overflow: hidden;
+  }
+
+  .score-div{
+    font-size: 1rem;
+    margin-left: -1.75rem;
+  }
+
+  .current-score {
+    font-size: 1rem;
+    margin-left: -2.8rem;
+  }
+
+  .timer {
+    right: 0rem;
+    font-size: 1rem;
+  }
+
+  .game-card-info {
+    width: 96vmin;
+  }
+
+  .hole3, .hole6, .hole9 {
+    right: -1rem;
+}
+
+.hole1, .hole4, .hole7 {
+  left: -1rem;
+}
+
+.mole {
+  background: url("../images/mole.png") center / 7.5rem no-repeat;
+}
+
+.mute-button {
+  font-size: 2rem;
+  top: 7.3%;
+}
+
+.end-game-heading{
+  font-size: 1.5rem;
+}
+}
+
+
+
+/* Tablets  */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .hole {
+    background-position-y: 108%;
+  }
+  .mole {
+    height: 111%;
+  }
 }
