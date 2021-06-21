@@ -144,6 +144,10 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - How mute and unmute audio was taken from [StackoverFlow](https://stackoverflow.com/questions/7798530/mute-and-unmute-button-toggle-html5-audio/7798585#7798585) written by Esailija.
 
+- How to store objects to local storage was taken from [stackoverFlow](https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage) written by Christian C. Salvadó
+
+How to build a highscore leader board was greatly assisted by [James Q quick](https://www.youtube.com/watch?v=DFhmNLKwwGw)
+
 #### Educational Credit
 
 - [Code Institute](https://www.codeinstitute.net/) Where 99% of this developers knowledge of JavaScript comes from.
@@ -154,7 +158,7 @@ All testing of this project can be found here on [testing.md](testing.md) on a s
 
 - [w3schools](https://www.w3schools.com/tags/av_prop_playbackrate.asp) How to increase playback speed. 
 
-- [StackoverFlow](https://stackoverflow.com/questions/4727263/get-second-child-using-jquery) How to select second child using jQuery.
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) How to sort through an objects values.
 
 ### Acknowledgements
 
