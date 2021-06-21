@@ -132,7 +132,6 @@ section.game-card-hide {
 /* ----- End game card ----- */
 .end-game-card {
   width: 50%;
-  
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -145,24 +144,24 @@ section.game-card-hide {
 }
 
 .end-game-heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: blanchedalmond;
   text-shadow: 1px 2px 4px black;
   padding: 1.85rem 0px;
 }
 
-.score-name {
-  width: 40%;
-  padding-left: 0.25rem; /* Pushes placeholder text to right */
-  border-radius: revert;
-  box-shadow: 0px 0px 2px black;
+.end-game-para {
+  font-size: 1rem;
+  color: blanchedalmond;
+  text-shadow: 1px 2px 4px black;
+  padding: 1.85rem 0px;
 }
+
 div.d-inline-block {
   padding-top: 1.75rem;
 }
 
-.play-again,
-.submit-button {
+.play-again {
   color: white;
   font-family: inherit;
   font-size: 1rem;
@@ -174,16 +173,14 @@ div.d-inline-block {
 }
 
 /* Styles the end game buttons when the mouse hovers over */
-.play-again:hover,
-.submit-button:hover {
+.play-again:hover {
   color: rgba(0, 0, 0, 0.2);
   background-color: blanchedalmond;
   box-shadow: 1px 0px 4px black;
 }
 
 /* Styles the end game buttons when the mouse hovers clicks them */
-.play-again:active,
-.submit-button:active {
+.play-again:active {
   border: 1px solid gray;
   text-shadow: 0px 0px 0px grey;
 }
@@ -198,50 +195,6 @@ section.end-game-show {
   visibility: unset;
 }
 
-/* ----- Highscore Card ----- */
-.highscore-card {
-  visibility: hidden;
-  width: 50%;
-  color: blanchedalmond;
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  background-color: rgba(222, 184, 135, 0.85);
-  position: absolute; /* Absolute positiong used to center card inside wrapper */
-  top: inherit;
-  left: inherit;
-  transform: inherit;
-  z-index: 201;
-}
-
-.high-scores {
-  font-size: 1.5rem;
-  color: blanchedalmond;
-  text-shadow: 1px 2px 4px black;
-  padding: 1.85rem 0px;
-}
-
-.goback-btn {
-  color: white;
-  font-size: 1rem;
-  font-family: inherit;
-  padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, 0.13);
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0px 4px black;
-}
-
-.goback-btn:hover{
-  color: rgba(0, 0, 0, 0.2);
-  background-color: blanchedalmond;
-  box-shadow: 1px 0px 4px black;
-}
-
-.goback-btn:active{
-  border: 1px solid gray;
-  text-shadow: 0px 0px 0px grey;
-}
 
 /* ----- Game, holes and moles ----- */
 .game {
