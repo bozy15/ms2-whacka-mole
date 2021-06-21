@@ -8,9 +8,6 @@ $(document).ready(function () {
   const startButton = $(".start-button");
   const whackAudio = new Audio("assets/sounds/whack.mp3");
   const backgroundAudio = new Audio("assets/sounds/background-music.mp3");
-  // Retrieve scores or get empty array to store scores
-  const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
-
   // Dynamically changing variables
   let sameHole;
   let timeUp = false;
@@ -94,7 +91,7 @@ $(document).ready(function () {
     countdown = startTime / 1000; // Assigns 30s to countdown
     $(timer).append(countdown); // Puts the time in the HTML
     score = 0;
-    $(currentScore).text(score); // Adds the starting score to HTML
+    $(currentScore).text(`${score}`); // Adds the starting score to HTML
     timeUp = false;
     selectSpeed();
 
@@ -115,6 +112,7 @@ $(document).ready(function () {
       // decrement the timer
       countdown -= 1;
       $(timer).text(`Time Left:${countdown}`); // Adds countdown to html
+      $(currentScore).text(score);
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
@@ -132,6 +130,7 @@ $(document).ready(function () {
   function whackaMole(e) {
     whackAudio.play();
     score++; // Increments score by 1 when mole is clicked
+
     if (score % 10 === 0) {
       // Adds an extra 10s after the score reaches multiples of 10
       countdown += 10;
@@ -145,16 +144,6 @@ $(document).ready(function () {
       $(this).css("pointer-events", "auto"); // Resets pointer events after 600ms
     }, 600);
     $(currentScore).text(score); // Appends the score to the .current-score div
-  }
-
-  function saveScores() {
-    // Grabs the value from the input field
-    let userName = $("#score-name").val();
-    userScore = {
-      name: userName,
-      Score: currentScore.text(),
-    };
-    highScore.push(userScore); // Stores userScore in local storage
   }
 
   // Restarts the game when play again button is pressed
@@ -173,13 +162,10 @@ $(document).ready(function () {
   });
 
   // Starts game after play again button is pressed
-  $("#play-again").click(() => {
+  $(".play-again").click(() => {
     $(".end-game-card").removeClass("end-game-show");
     playAgain();
   });
-  
-  // Submit button eventListener
-  $("#submit-score").click(saveScores);
 
   // Mute button eventListener
   $(".mute-button").click(() => {
