@@ -40,7 +40,7 @@ header {
 }
 
 .score-div {
-  display:inline-block;
+  display: inline-block;
   font-size: 2rem;
   color: blanchedalmond;
   text-indent: 3rem;
@@ -71,7 +71,6 @@ header {
 /* ----- Start game card ----- */
 .game-card-info {
   width: 50%;
-  height: 70%;
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -101,6 +100,7 @@ header {
 }
 
 .start-button {
+  position: relative;
   color: white;
   font-family: inherit;
   padding: 0 0.5em;
@@ -132,7 +132,7 @@ section.game-card-hide {
 /* ----- End game card ----- */
 .end-game-card {
   width: 50%;
-  height: 60%;
+  
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.75rem;
@@ -197,6 +197,52 @@ div.d-inline-block {
 section.end-game-show {
   visibility: unset;
 }
+
+/* ----- Highscore Card ----- */
+.highscore-card {
+  visibility: hidden;
+  width: 50%;
+  color: blanchedalmond;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background-color: rgba(222, 184, 135, 0.85);
+  position: absolute; /* Absolute positiong used to center card inside wrapper */
+  top: inherit;
+  left: inherit;
+  transform: inherit;
+  z-index: 201;
+}
+
+.high-scores {
+  font-size: 1.5rem;
+  color: blanchedalmond;
+  text-shadow: 1px 2px 4px black;
+  padding: 1.85rem 0px;
+}
+
+.goback-btn {
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.13);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 4px black;
+}
+
+.goback-btn:hover{
+  color: rgba(0, 0, 0, 0.2);
+  background-color: blanchedalmond;
+  box-shadow: 1px 0px 4px black;
+}
+
+.goback-btn:active{
+  border: 1px solid gray;
+  text-shadow: 0px 0px 0px grey;
+}
+
 /* ----- Game, holes and moles ----- */
 .game {
   /*border: 2px solid brown; /* Used to help with layout of game area */
@@ -216,20 +262,10 @@ section.end-game-show {
   background: url("../images/mole-hole.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 12rem;
-  background-position-y: 8.5rem;
+ /* background-size: 12rem; */
+  background-position-y: 112%;
 }
 
-/* .hole::after {
-  content: "";
-  display: block;
-  width: 168px;
-  height: 88px;
-  position: absolute;
-  top: 6.81rem;
-  left: 10rem;
-  z-index: 3;
-}*/
 
 .hole1,
 .hole2,
