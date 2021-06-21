@@ -55,53 +55,15 @@
         <!-- End-game card -->
         <section class="end-game-card end-game-hide text-center">
             <h2 class="text-center flex-wrap end-game-heading">
-                <p>Well Done!</p>
-                <p>You showed those moles not to mess with your garden</p>
-                <p>Enter your name to save your highscore</p>
+                <p>Well Done!</p>               
             </h2>
-            <form id="user-name">
-                <label for="score-name"></label>
-                <input class="score-name" type="text" name="name" id="score-name" placeholder="Name" required>
-            </form>
+            <p class="end-game-para">You showed those moles not to mess with your garden</p>
+            <!-- Uses BS display class -->
             <div class="d-inline-block">
-                <!-- Uses BS display class -->
                 <button class="play-again" id="play-again">Play Again</button>
-            </div>
-            <div class="d-inline-block">
-                <!-- Uses BS display class -->
-                <button class="submit-button" type="submit" id="submit-score">Submit</button>
             </div>
         </section>
         <!-- End of End-game card -->
-        <!-- start of scoreboard table / Edited table Taken from: https://getbootstrap.com/docs/4.6/content/tables/ -->
-        <table class="score-board table">
-            <thead>
-                <tr>
-                    <th scope="col">Position</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="user-name"></td>
-                    <td class="user-score"></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td class="user-name"></td>
-                    <td class="user-score"></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td class="user-name"></td>
-                    <td class="user-score"></td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- End of scoreboard table -->
-
         <!-- Container that holds the main interactive area -->
         <div class="game">
 
