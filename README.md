@@ -149,15 +149,15 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 
 #### 1. Highscore leaderboard
 
-  - In the future a leader board will be added to keep record of the users highscore.
+- In the future a leader board will be added to keep record of the users highscore.
 
 #### 2. Another difficulty
 
-  - Add a "chaos" level of difficulty where there would be moles popping up from multiple holes at once as high speeds.
+- Add a "chaos" level of difficulty where there would be moles popping up from multiple holes at once as high speeds.
 
 #### 3. Use sprite sheet animation
 
-  - Using a sprite sheet would give a better "flow" to the game by making the animation and appearance of the moles coming up from the ground look more realistic and also cut down heavily on calls to individual images reducing the load times.
+- Using a sprite sheet would give a better "flow" to the game by making the animation and appearance of the moles coming up from the ground look more realistic and also cut down heavily on calls to individual images reducing the load times.
 
 ## Technologies Used
 
@@ -187,13 +187,13 @@ This project was developed using [VScode](https://code.visualstudio.com/), commi
 
 To deploy Whacka-mole to GitHub Pages from its [repo](https://github.com/bozy15/ms2-whacka-mole) these are the steps to take.
 
-    1. Log in to GitHub.
-    2. From the list of repos choose **bozy15/ms2-whacka-mole**
-    3. Near the top of the page there will be the menu items, click on **Settings**
-    4. On the left side of the screen there is another list of items.
-    5. Scroll down to the second last item which will be **Pages** and select it.
-    6. Under **Source** click the dropdown menu and select **Master**
-    7. Once selected the link will appear in a matter of seconds to the live site.
+1. Log in to GitHub.
+2. From the list of repos choose **bozy15/ms2-whacka-mole**
+3. Near the top of the page there will be the menu items, click on **Settings**
+4. On the left side of the screen there is another list of items.
+5. Scroll down to the second last item which will be **Pages** and select it.
+6. Under **Source** click the dropdown menu and select **Master**
+7. Once selected the link will appear in a matter of seconds to the live site.
 
 ### How to run this project locally
 
