@@ -1,5 +1,7 @@
+// ES version: 6
+
 // Runs game once DOM is fully loaded
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   // unchanging variables
   const holes = $(".hole");
   const moles = $(".mole");
@@ -35,7 +37,7 @@ $(document).ready(function () {
       "url(assets/images/mole-very-angry.png)"
     );
     // Chooses random time between 400ms and 1s
-    const fastestTime = Math.random() * 1000 + 400;
+    const fastestTime = Math.random() * 800 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
 
@@ -89,15 +91,15 @@ $(document).ready(function () {
   // Function to run the game when the start button is clicked
   function startGame() {
     countdown = startTime / 1000; // Assigns 30s to countdown
-    $(timer).append(countdown); // Puts the time in the HTML
+    $(timer).html(countdown); // Puts the time in the HTML
     score = 0;
-    $(currentScore).text(`${score}`); // Adds the starting score to HTML
+    $(currentScore).html(`${score}`); // Adds the starting score to HTML
     timeUp = false;
     selectSpeed();
 
     // Function to check if timer has reached 0
     function checkTime() {
-      if (countdown === 0) {
+      if (countdown < 1) {
         timeUp = true;
         backgroundAudio.pause(); // Will pause Background audio when game ends
       } else {
@@ -116,7 +118,7 @@ $(document).ready(function () {
       if (countdown < 1) {
         countdown = 0;
         clearInterval(startTimer); // Clears the setInterval() after timer reaches 0
-        $(timer).html(countdown);
+        $(timer).html(`Time Left:${countdown}`);
         endGameCard();
       }
     }, 1000);
@@ -169,8 +171,8 @@ $(document).ready(function () {
 
   // Mute button eventListener
   $(".mute-button").click(() => {
-    volumeOn = "fas fa-volume-up";
-    volumeOff = "fas fa-volume-mute";
+   let volumeOn = "fas fa-volume-up";
+   let volumeOff = "fas fa-volume-mute";
     // if statement that changes icon used for mute button when clicked
     if (backgroundAudio.muted) {
       $("#remove-icon").removeClass(volumeOn);
