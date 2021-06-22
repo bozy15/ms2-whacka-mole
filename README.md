@@ -250,9 +250,15 @@ How to build a highscore leader board was greatly assisted by [James Q quick](ht
 
 ### Acknowledgements
 
-- This developer's Mentor Caleb Mbakwe, who showed me the right path to go down when developing this project.
+- This project was inspired by Brian Murphy's [Whack A Walrus](https://github.com/brimurphy/whackwalrus) project.
 
-- Sean Young at Code Institute who was lead of the interactive-frontend channel at the time of this projects creation and helped guide this developer in the right direction when trying to increase difficulty while playing the game.
+- A special thanks to [Wes Bos](https://courses.wesbos.com/account) 30 day challenge which helped this developer grasp a better under standing of JavaScript while developing this project.
+
+- A special thanks to developer's Mentor Caleb Mbakwe, who showed the right path to go down when developing this project and helped find the right scope for this project given the time it needed to built in.
+
+- A special thanks to Sean Young at Code Institute who was lead of the interactive-frontend channel at the time of this projects creation and helped guide this developer in the right direction when trying to increase difficulty while playing the game.
+
+- A huge thanks to the students in the CI slack community who reviewed the code and played the game to help with bug finding and user testing.
 
 ### Content
 
