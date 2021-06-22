@@ -1,3 +1,7 @@
+# Whacka-Mole
+
+View the live site [here](https://bozy15.github.io/ms2-whacka-mole/)
+
 ## Table of Contents
 
 1. [**UX**](#ux)
@@ -44,7 +48,7 @@ The players goals:
 
 #### Developer Goals
 
-- Build a small game that I would enjoy playing to past the time and also challenge myself.
+- Build a small game that I would enjoy playing to pass the time and also challenge myself.
 - Write clean code using JavaScript and jQuery to allow the game to function without issues and also allow others to see how the code works with inline comments on block of code.
 - Create a new project to add to my portfolio to showcase my ability.
 
@@ -54,8 +58,8 @@ As the user of this application I want:
 
 1. To have instructions on how to play the game and what the rules may be.
 2. The ability to mute any sounds that would be playing in the background.
-3. To be able to see my current and high score.
-4. increase the level of difficulty as the I progress through the game.
+3. To be able to see my current score.
+4. Increase the level of difficulty as the I progress through the game.
 5. A visually appealing game.
 6. The ability to play this game on multiple devices.
 
@@ -69,7 +73,10 @@ As the user of this application I want:
 
 - Font used in this Project is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) This font was used to give the game a retro feel but contrasts nicely with the background image and sprites.
 
-- Main color pallet used Throughout the game <img src="assets/images/palette.png" alt="color-palette" width="300"/>
+- Main color pallet used throughout the project 
+<div align="center">
+<img src="assets/images/palette.png" alt="color-palette" width="450"/>
+</div>
 
 - Text Shadow was applied to both the .countdown-timer and .score containers to give the appearance that they are lifted from the image and floating above in the air.
 
@@ -109,7 +116,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 - When the start button is pressed the game begins
 
 <div align="center">
-<img src="assets/images/user-info-popup.png" alt="Screenshot of user info popup" width="300"/>
+<img src="assets/images/user-info-popup.png" alt="Screenshot of user info popup" width="500"/>
 </div>
 
 #### 2. Info display and mute button
@@ -119,7 +126,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 - Just below the countdown timer there is a mute button that stops the background audio playing when pressed. The icon used changes when clicked to signify the action taken.
 
 <div align="center">
-<img src="assets/images/info-display.png" alt="Screenshot of info display and mute button" width="300"/>
+<img src="assets/images/info-display.png" alt="Screenshot of info display and mute button" width="500"/>
 </div>
 
 #### 3. Start Button
@@ -142,7 +149,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 - The replay button doesn't refresh the window so the user-info popup doesn't display to keep the user more engaged with the game.
 
 <div align="center">
-<img src="assets/images/end-game-popup.png" alt="Screenshot of info display and mute button" width="300"/>
+<img src="assets/images/end-game-popup.png" alt="Screenshot of info display and mute button" width="500"/>
 </div>
 
 ### Features to Implement
@@ -260,6 +267,7 @@ How to build a highscore leader board was greatly assisted by [James Q quick](ht
 
 - A huge thanks to the students in the CI slack community who reviewed the code and played the game to help with bug finding and user testing.
 
+- A special thank you to Anna Greaves for sharing here wonderfully written README.md and testing.md and inspiring this developer to better their documentation. 
 ### Content
 
 - All text was written by Emmett Becirovic.
