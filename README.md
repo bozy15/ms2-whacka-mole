@@ -103,10 +103,10 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 
 #### 1. User info card
 
-    - When the page is loaded up for the first time, the user will be greeted with a pop-up card.
-    - This card will explain how the game is played
-    - When the window reloads the popup will show again.
-    - When the start button is pressed the game begins
+- When the page is loaded up for the first time, the user will be greeted with a pop-up card.
+- This card will explain how the game is played
+- When the window reloads the popup will show again.
+- When the start button is pressed the game begins
 
 <div align="center">
 <img src="assets/images/user-info-popup.png" alt="Screenshot of user info popup" width="300"/>
@@ -114,9 +114,9 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 
 #### 2. Info display and mute button
 
-    - On the top left of the page there is a score counter that increments every time the user successfully whacks a mole.
-    - On the top right of the page there is a timer that displays the amount of time left and decreases every second.
-    - Just below the countdown timer there is a mute button that stops the background audio playing when pressed. The icon used changes when clicked to signify the action taken.
+- On the top left of the page there is a score counter that increments every time the user successfully whacks a mole.
+- On the top right of the page there is a timer that displays the amount of time left and decreases every second.
+- Just below the countdown timer there is a mute button that stops the background audio playing when pressed. The icon used changes when clicked to signify the action taken.
 
 <div align="center">
 <img src="assets/images/info-display.png" alt="Screenshot of info display and mute button" width="300"/>
@@ -124,22 +124,22 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 
 #### 3. Start Button
 
-    - The start button is presented on the user info card when the window is first loaded.
-    - It has :hover and :active CSS to allow the user to know that they are hovering over it and when pressed.
+- The start button is presented on the user info card when the window is first loaded.
+- It has :hover and :active CSS to allow the user to know that they are hovering over it and when pressed.
 
 #### 4. Gameplay and audio
 
-    - When the game begins there is background music that will play on a loop at its intended play rate.
-    - When the user reaches 5 points the speed at which the moles pop up and down at a faster rate. The image used for the moles changes to give them an appearance that they've become agitated. the background music also increases in speed slightly to match the speed of the moles.
-    - Finally when the user reaches 10 points the speed of the moles and music increases again to add more difficulty. The image changes again to show that the moles are very angry.
-    - To keep the user playing the game as long as possible 10 seconds are incremented every 10 points scored. This only happens when the hardest difficulty is on and it was made that way so if the user misses a few moles they will struggle to get an extra 10 seconds to keep playing adding to the challenge.
-    - There is a different mole image added when a mole is whacked along with a snippet of audio to indicate when the user successfully hits a mole.
+- When the game begins there is background music that will play on a loop at its intended play rate.
+- When the user reaches 5 points the speed at which the moles pop up and down at a faster rate. The image used for the moles changes to give them an appearance that they've become agitated. the background music also increases in speed slightly to match the speed of the moles.
+- Finally when the user reaches 10 points the speed of the moles and music increases again to add more difficulty. The image changes again to show that the moles are very angry.
+- To keep the user playing the game as long as possible 10 seconds are incremented every 10 points scored. This only happens when the hardest difficulty is on and it was made that way so if the user misses a few moles they will struggle to get an extra 10 seconds to keep playing adding to the challenge.
+- There is a different mole image added when a mole is whacked along with a snippet of audio to indicate when the user successfully hits a mole.
 
 #### 5. Replay button
 
-    - The replay button is displayed on the end-game card when the game finishes and has the same CSS features as the start button.
-    - When clicked the game score will start at 0 and the timer will begin at the original time and the easiest difficulty will be played.
-    - The replay button doesn't refresh the window so the user-info popup doesn't display to keep the user more engaged with the game.
+- The replay button is displayed on the end-game card when the game finishes and has the same CSS features as the start button.
+- When clicked the game score will start at 0 and the timer will begin at the original time and the easiest difficulty will be played.
+- The replay button doesn't refresh the window so the user-info popup doesn't display to keep the user more engaged with the game.
 
 <div align="center">
 <img src="assets/images/end-game-popup.png" alt="Screenshot of info display and mute button" width="300"/>
@@ -149,15 +149,15 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) during the d
 
 #### 1. Highscore leaderboard
 
-    - In the future a leader board will be added to keep record of the users highscore.
+  - In the future a leader board will be added to keep record of the users highscore.
 
 #### 2. Another difficulty
 
-    - Add a "chaos" level of difficulty where there would be moles popping up from multiple holes at once as high speeds.
+  - Add a "chaos" level of difficulty where there would be moles popping up from multiple holes at once as high speeds.
 
 #### 3. Use sprite sheet animation
 
-    - Using a sprite sheet would give a better "flow" to the game by making the animation and appearance of the moles coming up from the ground look more realistic and also cut down heavily on calls to individual images reducing the load times.
+  - Using a sprite sheet would give a better "flow" to the game by making the animation and appearance of the moles coming up from the ground look more realistic and also cut down heavily on calls to individual images reducing the load times.
 
 ## Technologies Used
 
@@ -194,6 +194,19 @@ To deploy Whacka-mole to GitHub Pages from its [repo](https://github.com/bozy15/
     5. Scroll down to the second last item which will be **Pages** and select it.
     6. Under **Source** click the dropdown menu and select **Master**
     7. Once selected the link will appear in a matter of seconds to the live site.
+
+### How to run this project locally
+
+To clone this project:
+
+1. Click this link to the [Whacka-mole](https://github.com/bozy15/ms2-whacka-mole) repo.
+2. Under the menu items, there is a green button labelled **Code**.
+3. Click the **Code** button and under the **Clone** option select the **HTTPS** tab.
+4. Copy the clone URL for the repo.
+5. In Your IDE open Git
+6. Change the current directory to the location you want to clone this repo.
+7. Type **git clone** followed by the copied URL.
+8. Press Enter and your clone will be created.
 
 ## Credits
 
