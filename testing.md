@@ -13,9 +13,84 @@
 
 ## Manual Tests
 
+### Tests on Laptop
+
+All tests on laptop were repeated in Chrome and Firefox on two different screen sizes.
+
+  1. Game info popup
+      - Opened the game in a new window to check if popup would launch.
+      - Played the game and after time was up I refreshed the window to see if the popup would launch.
+      - Closed the window after a game had finished and opened a new one to see if the popup would launch.
+      - Checked if the game would start when the start button was pressed.
+      - Hovered over the start button to check the CSS added was working.
+      - Clicked the start button to check the relevant CSS was applied.
+
+  2. Score, Timer and the mute button
+      - Checked to see if the score incremented when a mole was hit.
+      - Confirmed that moles couldn't be hit multiple time before going back in the hole.
+      - Tried clicking on grass around a mole to see if it would score.
+      - Confirmed after the game was played again the score was returned to 0.
+      - Confirmed the timer begins at 20 seconds and counts down.
+      - Checked when the timer reaches 0 the game ends.
+      - Checked every time the user reaches a score of a 10 or multiple of 10, ten seconds are added on to the current time.
+      - Confirmed the audio would stop playing when the mute button was clicked.
+      - Checked the audio would resume playing after clicked the mute button again.
+      - Repeated the last to steps multiple times to make sure the button would always mute and unmute.
+
+    3. Gameplay
+      - Game was let run with no interaction to see if it would end when the timer reaches zero.
+      - Check to see if the game would end after adding on multiple bonus time.
+      - Checked that when moles are clicked on the image changes to reflect that they have been hit.
+      - Confirmed that the audio was played when moles where whacked.
+      - Confirmed that the background audio was played as soon as game started.
+      - Check to see if the different levels of difficulty would run when score 5 and 10 were reached.
+      - Confirmed that the images and the speed of playback for the audio would change to reflect the change in difficulty. 
+
+    4. End Game card 
+
 ## Client Stories Tests
 
+#### As a user, I want:
+
+1. To have instructions on how to play the game and what the rules may be.
+
+   - When the user firsts visits the site they are greeted with a popup card that gives a how to play.
+   - Once the user reads all the text they will see a **start button** at the bottom of the popup that will started the game once clicked.
+
+2. The ability to mute any sounds that would be playing in the background.
+
+   - While in game there is a mute button displayed on the top right below the timer.
+   - The icon used while the audio plays is the displayed as the mute action that will be taken if clicked.
+   - Once clicked the icon changes to a similar icon but displays volume which will play the audio again.
+
+3. To be able to see my current score.
+
+   - On the top-left there is a score board that dynamically changes every time the user whacks a mole.
+
+4. Increase the level of difficulty as the I progress through the game.
+
+   - After a score of 5 points is reached, the speed of which the moles pop up and down increases creating a slight challenge.
+   - Once a score of 10 is reached the speed increases once again creating a much more difficult challenge for the user and they can only miss a few moles otherwise they wont make enough points to extend the time.
+
+5. A visually appealing game.
+   
+   - This project uses a vibrant background and sprites which gives a colorful cartoon theme.
+   - [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P#standard-styles) Font was used to tie in with the old-school game whack-a-mole and pay homage to 8 and 16 bit games.
+   - A number of mole sprites were used in this project, changing when the difficulty changes and when a mole is hit.
+   - Background music with a cartoonish feel is played on loop and increases in speed to match the different levels of difficulty.
+
+6. The ability to play this game on multiple devices.
+
+   - The game was designed to be played on PC but two media queries were created to enable this game to be played on both tablet and mobile devices.
+
+
 ## Automated Tests
+
+These were the validation services use to check the projects code.
+
+- [W3C Markup Validation](https://validator.w3.org/) was used to check the HTML.
+- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used to check the CSS.
+- [JSHint](https://jshint.com/) was used to check the JavaScript
 
 ## Bugs
 
