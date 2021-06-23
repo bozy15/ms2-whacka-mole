@@ -267,7 +267,8 @@ How to build a highscore leader board was greatly assisted by [James Q quick](ht
 
 - A huge thanks to the students in the CI slack community who reviewed the code and played the game to help with bug finding and user testing.
 
-- A special thank you to Anna Greaves for sharing here wonderfully written README.md and testing.md and inspiring this developer to better their documentation. 
+- A special thank you to Anna Greaves for sharing here wonderfully written README.md and testing.md on her [Picflip](https://github.com/AJGreaves/picflip) and inspiring this developer to better their documentation.
+
 ### Content
 
 - All text was written by Emmett Becirovic.
