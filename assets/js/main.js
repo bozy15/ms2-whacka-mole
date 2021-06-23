@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
       "url(assets/images/mole-very-angry.png)"
     );
     // Chooses random time between 400ms and 1s
-    const fastestTime = Math.random() * 800 + 400;
+    const fastestTime = Math.random() * 650 + 200;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
 
@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
     backgroundAudio.playbackRate = 1.2; // Increases speed of music
     $(".mole").css("background-image", "url(assets/images/mole-angry.png)"); // changes image when this function runs
     // Chooses random time between 400ms and 1.4s
-    const fasterTime = Math.random() * 1400 + 400;
+    const fasterTime = Math.random() * 1200 + 400;
     const holeUp = findHole(holes); // Selects hole chosen by findHole()
     holeUp.classList.add("up"); // Adds CSS to the selected hole to make the mole appear
     // Function makes moles do down if they haven't been hit
