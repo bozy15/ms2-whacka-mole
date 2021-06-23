@@ -60,7 +60,6 @@ header {
   display: inline-block;
   position: absolute;
   right: 3rem;
-  margin-top: 0.5em;
   text-indent: 6em;
   text-shadow: 1px 0px 4px black;
   font-size: 2em;
@@ -302,7 +301,6 @@ footer {
   .timer {
     right: 0rem;
     font-size: 1rem;
-    margin: auto; /* Aligns the timer */
   }
 
   .game-card-info {
