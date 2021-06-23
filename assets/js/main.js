@@ -148,11 +148,6 @@ jQuery(document).ready(function ($) {
     $(currentScore).text(score); // Appends the score to the .current-score div
   }
 
-  // Restarts the game when play again button is pressed
-  function playAgain() {
-    startGame();
-  }
-
   // Event listeners
   // Runs WhackaMole function when mole image is clicked
   $(moles).on("click", whackaMole);
@@ -166,7 +161,7 @@ jQuery(document).ready(function ($) {
   // Starts game after play again button is pressed
   $(".play-again").click(() => {
     $(".end-game-card").removeClass("end-game-show");
-    playAgain();
+    startGame();
   });
 
   // Mute button eventListener
