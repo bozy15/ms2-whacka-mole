@@ -100,9 +100,10 @@ As the user of this application I want:
 
 - A snippet of audio that plays when the user hits a mole before they re-enter the hole to add a feeling of success and allow the user to acknowledge that they hit a mole correctly.
 
-###
+### Wireframes
 
 The wireframes were created using [Balsamiq](https://balsamiq.com/) during the design process of this project.
+  - Wireframes for this project can be found [**here**](assets/wireframes/whacka-mole.pdf)
 
 ## Features
 
